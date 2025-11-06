@@ -1,6 +1,6 @@
 # pewtato-gaming-games
 pewtato gaming games rating games with description
 
-hello pewtato was here nathankopc-prog was here 7/11/2025
+also a school project
 
-https://pewtato.github.io/pewtato-gaming-games
+website link https://pewtato.github.io/pewtato-gaming-games
