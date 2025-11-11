@@ -49,3 +49,106 @@ text-align: center;
 white-space: nowrap;
 -webkit-overflow-scrolling: touch;
 }
+
+/* Dark mode theme for pewtato-gaming-games */
+
+:root{
+  --bg: #0b1116;
+  --surface: #0f1720;
+  --card: #0f1724;
+  --muted: #9aa4b2;
+  --text: #e6eef8;
+  --accent: #63a8ff;
+  --border: rgba(255,255,255,0.04);
+}
+
+body.dark-mode {
+  background-color: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Navbar */
+body.dark-mode .navbar-dark.bg-dark {
+  background-color: #0b0f13 !important;
+  border-bottom: 1px solid var(--border);
+}
+body.dark-mode .navbar-brand strong { color: var(--text); }
+
+/* Album container */
+body.dark-mode .album {
+  background-color: transparent;
+}
+
+/* Cards */
+body.dark-mode .card {
+  /* slightly lighter card background for more contrast with the page bg */
+  background-color: #101822; /* changed from #0f1724 to a touch lighter */
+  color: var(--text);
+  border: 1px solid var(--border);
+  /* softer shadow and rounded corners */
+  box-shadow: 0 4px 14px rgba(0,0,0,0.45);
+  border-radius: 0.75rem;
+  overflow: hidden; /* ensures children (images) follow rounded corners */
+}
+
+body.dark-mode .card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 1px solid var(--border);
+  /* no separate corner radii needed because overflow:hidden is set on .card */
+}
+
+/* Card headings */
+body.dark-mode .card h3 {
+  color: var(--text);
+  text-align: center;
+  margin: 0.5rem 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+/* Text and muted */
+body.dark-mode .card-text,
+body.dark-mode p,
+body.dark-mode li {
+  color: #d7e3ef;
+}
+
+body.dark-mode .text-muted,
+body.dark-mode small.text-muted {
+  color: var(--muted) !important;
+}
+
+/* Buttons and links */
+body.dark-mode a,
+body.dark-mode .btn,
+body.dark-mode .navbar a {
+  color: var(--accent);
+}
+body.dark-mode a:hover { color: #9ad0ff; }
+
+/* Footer */
+body.dark-mode footer {
+  background: transparent;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+
+/* Utilities */
+body.dark-mode .bg-dark { background-color: #0b0f13 !important; }
+body.dark-mode .bg-light { background-color: transparent !important; }
+body.dark-mode .shadow-sm { box-shadow: none !important; }
+
+/* Ensure lists are readable */
+body.dark-mode ul { color: var(--text); }
+
+/* Improve small text contrast */
+body.dark-mode small { color: var(--muted); }
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+  body.dark-mode .card h3 { font-size: 1rem; }
+}
